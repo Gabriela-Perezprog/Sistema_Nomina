@@ -1,0 +1,73 @@
+/* FONDO ANIMADO Y ESTILO GENERAL */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #00C9FF, #92FE9D);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*ANIMACIÓN DEL FONDO */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🧭 CONTENEDOR CENTRAL */
+.menu-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 50px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+     /*titulos*/
+h2 {
+  color: white;
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/*BOTONES */
+button {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ee0979, #ff6a00);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ADAPTACIÓN A CELULAR */
+@media (max-width: 600px) {
+  .menu-container {
+    width: 85%;
+    padding: 25px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+}
